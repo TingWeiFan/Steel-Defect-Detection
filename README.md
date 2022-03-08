@@ -11,7 +11,7 @@ https://www.kaggle.com/c/severstal-steel-defect-detection/overview
 
 為了解決資料不平均的問題，我先做資料增強(data augmentation)，再將每種類別取差不多數量的數據做訓練，但準確率卻沒有明顯改善，最後做法為直接將資料增強後的數據全部作為training data。  
 
-執行下面兩個python檔後，會在名為data的資料夾下產生train, validation, test用的csv檔。  
+執行前兩個python檔後，會在名為data的資料夾下產生train, validation, test用的csv檔。  
 最後一個指令是為了將csv的檔案做整理，因為有些圖片中含有多種類別，在csv中視分開表示，為了後續在計算準確率上更準確必須將資料作彙整。
 ```
 python data_augmentation.py
