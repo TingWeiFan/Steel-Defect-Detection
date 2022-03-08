@@ -20,6 +20,17 @@ python ground_truth_preprocessing.py
 ```
 
 ## 模型
+在模型的選擇上採用Unet++做訓練，模型架構放在*modules.py*。  
+如果結果沒有達到預期效果，您可以修改以下超參數來重新訓練您的模型 :
+* n_filters
+* dropout (或是把dropout關掉)
+* learning rate
+* batch size
+
+執行下面指令開始訓練模型
+```
+python main.py
+```
 
 ## 評估
 
