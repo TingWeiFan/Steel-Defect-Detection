@@ -50,7 +50,7 @@ python main.py
 * n_filters = 16
 * loss = dice loss
 * epochs = 100
-
+---
 <img src="img/pred_2a6669d9a.jpg" width="70%"/>
 <img src="img/pred_2c4b101db.jpg" width="70%"/>
 <img src="img/pred_2c37ea89f.jpg" width="70%"/>
