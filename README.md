@@ -10,7 +10,7 @@ https://www.kaggle.com/c/severstal-steel-defect-detection/overview
 <img src="img/label_number.jpeg" width="40%"/>
 
 為了解決資料不平均的問題，我先做資料增強(data augmentation)，再將每種類別取差不多數量的數據做訓練，但準確率卻沒有明顯改善，最後做法為直接將資料增強後的數據全部作為training data。  
-執行下面兩個python檔後，會在名為data的資料夾下產生train, validation, test用的csv檔  
+執行下面兩個python檔後，會在名為data的資料夾下產生train, validation, test用的csv檔。  
 ```
 python data_augmentation.py
 python split_train_test_csv.py
