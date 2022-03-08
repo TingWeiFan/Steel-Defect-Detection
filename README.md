@@ -27,11 +27,26 @@ python ground_truth_preprocessing.py
 * learning rate
 * batch size
 
+另外，在計算loss上，上網查了資料發現使用下面的寫法才可以檢測多類別的問題
+```python
+def dice_coefficient(y_true, y_pred):
+    sum1 = 2 * tf.math.reduce_sum(y_true * y_pred, axis=(0, 1, 2))
+    sum2 = tf.math.reduce_sum(y_true**2 + y_pred**2, axis=(0, 1, 2))
+    dice = sum1 / (sum2 + 1e-9)
+    dice = tf.math.reduce_mean(dice)
+    return dice
+```
+
 執行下面指令開始訓練模型
 ```
 python main.py
 ```
 
-## 評估
-
 ## 結果
+最後，我在超參數的使用如下，得到83%的準確率
+* learning rate = 0.01
+* batch size = 4
+* dropout = none
+* n_filters = 16
+* loss = dice loss
+* epochs = 100
